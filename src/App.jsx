@@ -6,6 +6,8 @@ import Home from './core/layout/Home';
 import Login from './features/users/Login';
 import Register from './features/users/Register';
 import Profile from './features/users/Profile';
+import PatientList from './features/patients/PatientList';
+import PatientForm from './features/patients/PatientForm';
 import './core/global.scss';
 
 const App = () => {
@@ -23,6 +25,9 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/patients" element={<PatientList />} />
+            <Route path="/patients/new" element={<PatientForm />} />
+            <Route path="/patients/:id/edit" element={<PatientForm />} />
           </Routes>
         </div>
       </BrowserRouter>

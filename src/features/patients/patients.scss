@@ -1,0 +1,96 @@
+select,
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  &:focus { outline: none; border-color: #007bff; }
+}
+
+.patients-container {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.patients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+
+  .search-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    .form-group {
+      flex: 1;
+      min-width: 150px;
+      margin-bottom: 0;
+      label { display: block; margin-bottom: 5px; }
+    }
+  }
+
+  .search-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+
+  th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  th {
+    background-color: #f5f5f5;
+  }
+}
+
+.patients-actions {
+  display: flex;
+  gap: 8px;
+
+  .btn {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+}
+
+.patient-form {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .form-group {
+    margin-bottom: 15px;
+    label { display: block; margin-bottom: 5px; }
+  }
+
+  .form-actions {
+    margin-top: 20px;
+  }
+
+  .readonly-field {
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 4px;
+    color: #555;
+  }
+}
