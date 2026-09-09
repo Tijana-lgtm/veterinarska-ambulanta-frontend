@@ -8,6 +8,7 @@ import Register from './features/users/Register';
 import Profile from './features/users/Profile';
 import PatientList from './features/patients/PatientList';
 import PatientForm from './features/patients/PatientForm';
+import AppointmentSchedule from './features/appointments/AppointmentSchedule';
 import './core/global.scss';
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/patients" element={<PatientList />} />
             <Route path="/patients/new" element={<PatientForm />} />
             <Route path="/patients/:id/edit" element={<PatientForm />} />
+            <Route path="/appointments/schedule" element={<AppointmentSchedule />} />
           </Routes>
         </div>
       </BrowserRouter>

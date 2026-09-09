@@ -9,6 +9,7 @@ const Header = () => {
   const navigate = useNavigate();
   const userRole = user?.role || user?.['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
   const canManagePatients = userRole === 'Veterinar' || userRole === 'Pomocnik';
+  const isPomocnik = userRole === 'Pomocnik';
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -22,6 +23,7 @@ const Header = () => {
         <div className="nav-links">
           <Link to="/">Početna</Link>
           {canManagePatients && <Link to="/patients">Pacijenti</Link>}
+          {isPomocnik && <Link to="/appointments/schedule">Zakazivanje</Link>}
           <span style={{'flexGrow':1}}></span>
           {!user && (
             <>
