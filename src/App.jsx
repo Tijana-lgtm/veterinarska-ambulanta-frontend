@@ -10,6 +10,7 @@ import PatientList from './features/patients/PatientList';
 import PatientForm from './features/patients/PatientForm';
 import AppointmentSchedule from './features/appointments/AppointmentSchedule';
 import './core/global.scss';
+import VetAppointments from './features/appointments/VetAppointments';
 
 const App = () => {
   let token = localStorage.getItem('token');
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/patients/new" element={<PatientForm />} />
             <Route path="/patients/:id/edit" element={<PatientForm />} />
             <Route path="/appointments/schedule" element={<AppointmentSchedule />} />
+            <Route path="/appointments/my" element ={<VetAppointments/>} />
           </Routes>
         </div>
       </BrowserRouter>
